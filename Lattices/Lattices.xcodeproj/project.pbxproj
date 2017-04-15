@@ -48,9 +48,6 @@
 		BF35A95F1D8F529D007B450B /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF35A95E1D8F529D007B450B /* SourceViewController.swift */; };
 		BF35A9611D8F5346007B450B /* MenuViewController+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF35A9601D8F5346007B450B /* MenuViewController+File.swift */; };
 		BF3A9C551D677BEF00FB0F57 /* SceneObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A9C531D6779D100FB0F57 /* SceneObject.swift */; };
-		BF4DC7CB1D3D35D300D2E1B0 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DC7CA1D3D35D300D2E1B0 /* ShareViewController.swift */; };
-		BF4DC7CE1D3D35D300D2E1B0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4DC7CC1D3D35D300D2E1B0 /* MainInterface.storyboard */; };
-		BF4DC7D21D3D35D300D2E1B0 /* Share.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BF4DC7C81D3D35D300D2E1B0 /* Share.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BF532F581D0692F600733325 /* FloatNExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF532F541D068F7B00733325 /* FloatNExtension.swift */; };
 		BF5556481D33B13E00B24C77 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5556471D33B13E00B24C77 /* Element.swift */; };
 		BF55564B1D33B64200B24C77 /* ElementName.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF55564D1D33B64200B24C77 /* ElementName.strings */; };
@@ -212,13 +209,6 @@
 			remoteGlobalIDString = BFBC40191D0639C20030A839;
 			remoteInfo = Lattices;
 		};
-		BF4DC7D01D3D35D300D2E1B0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BF0B26BB1CF7D15600A20165 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF4DC7C71D3D35D300D2E1B0;
-			remoteInfo = Share;
-		};
 		BFBC405E1D0653C80030A839 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BF0B27A61CF7D66500A20165 /* CIFLexer.xcodeproj */;
@@ -235,7 +225,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				BF4DC7D21D3D35D300D2E1B0 /* Share.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,7 +310,6 @@
 		BF35A9601D8F5346007B450B /* MenuViewController+File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MenuViewController+File.swift"; sourceTree = "<group>"; };
 		BF3A9C4E1D6733B500FB0F57 /* Eigen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Eigen.swift; sourceTree = "<group>"; };
 		BF3A9C531D6779D100FB0F57 /* SceneObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneObject.swift; sourceTree = "<group>"; };
-		BF4DC7C81D3D35D300D2E1B0 /* Share.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Share.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4DC7CA1D3D35D300D2E1B0 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		BF4DC7CD1D3D35D300D2E1B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		BF4DC7CF1D3D35D300D2E1B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -464,13 +452,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF4DC7C51D3D35D300D2E1B0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BFBC40171D0639C20030A839 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -503,7 +484,6 @@
 			isa = PBXGroup;
 			children = (
 				BFBC401A1D0639C20030A839 /* Lattices.app */,
-				BF4DC7C81D3D35D300D2E1B0 /* Share.appex */,
 				BF1E43BD1D46D19E00B2D6A4 /* LatticesTests.xctest */,
 			);
 			name = Products;
@@ -1032,23 +1012,6 @@
 			productReference = BF1E43BD1D46D19E00B2D6A4 /* LatticesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BF4DC7C71D3D35D300D2E1B0 /* Share */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BF4DC7D31D3D35D300D2E1B0 /* Build configuration list for PBXNativeTarget "Share" */;
-			buildPhases = (
-				BF4DC7C41D3D35D300D2E1B0 /* Sources */,
-				BF4DC7C51D3D35D300D2E1B0 /* Frameworks */,
-				BF4DC7C61D3D35D300D2E1B0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Share;
-			productName = Share;
-			productReference = BF4DC7C81D3D35D300D2E1B0 /* Share.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		BFBC40191D0639C20030A839 /* Lattices */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFBC40291D0639C20030A839 /* Build configuration list for PBXNativeTarget "Lattices" */;
@@ -1063,7 +1026,6 @@
 			);
 			dependencies = (
 				BFBC405F1D0653C80030A839 /* PBXTargetDependency */,
-				BF4DC7D11D3D35D300D2E1B0 /* PBXTargetDependency */,
 			);
 			name = Lattices;
 			productName = SwiftCrystaliOS;
@@ -1083,27 +1045,17 @@
 					BF1E43BC1D46D19E00B2D6A4 = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 						TestTargetID = BFBC40191D0639C20030A839;
-					};
-					BF4DC7C71D3D35D300D2E1B0 = {
-						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 4MY8L8N43N;
-						LastSwiftMigration = 0800;
-						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
 					};
 					BFBC40191D0639C20030A839 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 4MY8L8N43N;
+						DevelopmentTeam = JL8K7LH7KS;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.iCloud = {
 								enabled = 1;
@@ -1140,7 +1092,6 @@
 			projectRoot = "";
 			targets = (
 				BFBC40191D0639C20030A839 /* Lattices */,
-				BF4DC7C71D3D35D300D2E1B0 /* Share */,
 				BF1E43BC1D46D19E00B2D6A4 /* LatticesTests */,
 			);
 		};
@@ -1168,14 +1119,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF4DC7C61D3D35D300D2E1B0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BF4DC7CE1D3D35D300D2E1B0 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1253,14 +1196,6 @@
 				BFBAEB2C1D84485F000C4AF2 /* XYZ.swift in Sources */,
 				BF1BE3761D8AACEC000C4FB4 /* XYZ+Matrix.swift in Sources */,
 				BFBAEB361D847973000C4AF2 /* WyckoffDetectorTest.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF4DC7C41D3D35D300D2E1B0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BF4DC7CB1D3D35D300D2E1B0 /* ShareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1414,11 +1349,6 @@
 			target = BFBC40191D0639C20030A839 /* Lattices */;
 			targetProxy = BF1E43CB1D46D2EA00B2D6A4 /* PBXContainerItemProxy */;
 		};
-		BF4DC7D11D3D35D300D2E1B0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BF4DC7C71D3D35D300D2E1B0 /* Share */;
-			targetProxy = BF4DC7D01D3D35D300D2E1B0 /* PBXContainerItemProxy */;
-		};
 		BFBC405F1D0653C80030A839 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CIFLexer;
@@ -1495,6 +1425,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = JL8K7LH7KS;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1543,9 +1474,11 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = JL8K7LH7KS;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1568,10 +1501,12 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = LatticesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.zenithgear.LatticesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "../Sources/Objc/SwiftCrystaliOS-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lattices.app/Lattices";
@@ -1583,48 +1518,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = JL8K7LH7KS;
 				INFOPLIST_FILE = LatticesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.zenithgear.LatticesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "../Sources/Objc/SwiftCrystaliOS-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lattices.app/Lattices";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		BF4DC7D41D3D35D300D2E1B0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Share/Share.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4MY8L8N43N;
-				INFOPLIST_FILE = Share/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.zenithgear.Lattices.iOS.Share;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		BF4DC7D51D3D35D300D2E1B0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Share/Share.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4MY8L8N43N;
-				INFOPLIST_FILE = Share/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.zenithgear.Lattices.iOS.Share;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1634,13 +1536,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Lattices/Lattices.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4MY8L8N43N;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = "../OpenSSL-for-iPhone/include";
 				INFOPLIST_FILE = Lattices/Info.plist;
 				INFOPLIST_PREPROCESS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "../OpenSSL-for-iPhone/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.zenithgear.Lattices.iOS;
@@ -1657,13 +1560,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Lattices/Lattices.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 4MY8L8N43N;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = "../OpenSSL-for-iPhone/include";
 				INFOPLIST_FILE = Lattices/Info.plist;
 				INFOPLIST_PREPROCESS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "../OpenSSL-for-iPhone/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.zenithgear.Lattices.iOS;
@@ -1693,15 +1597,6 @@
 			buildConfigurations = (
 				BF1E43C51D46D19E00B2D6A4 /* Debug */,
 				BF1E43C61D46D19E00B2D6A4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BF4DC7D31D3D35D300D2E1B0 /* Build configuration list for PBXNativeTarget "Share" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BF4DC7D41D3D35D300D2E1B0 /* Debug */,
-				BF4DC7D51D3D35D300D2E1B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

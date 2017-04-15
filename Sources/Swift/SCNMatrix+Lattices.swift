@@ -12,7 +12,7 @@ func * ( l: SCNMatrix4, r: SCNMatrix4 ) -> SCNMatrix4 {
     return SCNMatrix4Mult(l, r)
 }
 
-extension SCNMatrix4 {
+extension SCNMatrix4 : CustomStringConvertible {
     init(row1:SCNVector4,row2:SCNVector4,row3:SCNVector4,row4:SCNVector4) {
         self.init()
         self.row1 = row1
@@ -74,10 +74,13 @@ extension SCNMatrix4 {
         get { return SCNVector4Make( m14, m24, m34, m44 ) }
         set ( col ) { m14 = col.x; m24 = col.y; m34 = col.z; m44 = col.w }
     }
+    
+    
 
-    var show : String {
-        return row1.show + "\n" + row2.show + "\n" + row3.show + "\n" + row4.show + "\n"
+    public var description : String {
+        return "\(row1), \(row2), \(row3), \(row4)"
     }
+
     subscript(row: Int, col: Int) -> SCNFloat {
         get {
             switch (row,col) {
@@ -157,6 +160,6 @@ extension SCNMatrix4 {
         }
     }
     var trans : SCNMatrix4 {
-        return SCNMatrix4.init(cols: [row1,row2,row3,row4])
+        return SCNMatrix4(cols: [row1,row2,row3,row4])
     }
 }

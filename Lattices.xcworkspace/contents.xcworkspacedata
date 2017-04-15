@@ -11,6 +11,6 @@
       location = "group:XYZ/XYZ.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Lattices/Lattices.xcodeproj">
+      location = "group:/Users/adamnemecek/Code/Lattices/Lattices/Lattices.xcodeproj">
    </FileRef>
 </Workspace>

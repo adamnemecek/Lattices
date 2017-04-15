@@ -9,44 +9,32 @@
 import SceneKit
 
 extension SCNMaterial {
+    convenience init(color: UIColor) {
+        self.init()
+        diffuse.contents = color
+    }
     static var white: SCNMaterial {
-        let m = SCNMaterial()
-        m.diffuse.contents = UIColor.white
-        return m
+        return SCNMaterial(color: .white)
     }
     static var lightGray: SCNMaterial {
-        let m = SCNMaterial()
-        m.diffuse.contents = UIColor.lightGray
-        return m
+        return SCNMaterial(color: .lightGray)
     }
     static var gray: SCNMaterial {
-        let m = SCNMaterial()
-        m.diffuse.contents = UIColor.gray
-        return m
+        return SCNMaterial(color: .gray)
     }
     static var darkGray: SCNMaterial {
-        let m = SCNMaterial()
-        m.diffuse.contents = UIColor.darkGray
-        return m
+        return SCNMaterial(color: .darkGray)
     }
     static var black: SCNMaterial {
-        let m = SCNMaterial()
-        m.diffuse.contents = UIColor.black
-        return m
+        return SCNMaterial(color: .black)
     }
     static var red: SCNMaterial {
-        let m = SCNMaterial()
-        m.diffuse.contents = UIColor.red
-        return m
+        return SCNMaterial(color: .red)
     }
     static var yellow: SCNMaterial {
-        let m = SCNMaterial()
-        m.diffuse.contents = UIColor.yellow
-        return m
+        return SCNMaterial(color: .yellow)
     }
     static var blue: SCNMaterial {
-        let m = SCNMaterial()
-        m.diffuse.contents = UIColor.blue
-        return m
+        return SCNMaterial(color: .blue)
     }
 }

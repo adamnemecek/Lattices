@@ -77,21 +77,17 @@ extension CIFData : CIFShow {
     }
 
     fileprivate func query(_ tag:String) -> [String] {
-        let result = items.filter({$0.queryTest(tag)})
-        return result.count > 0 ? result[0].queryGet(tag) : []
+        let result = items.filter { $0.queryTest(tag) }
+        return result.first?.queryGet(tag) ?? []
     }
 
     func string(_ tag:String) -> String? {
-        let result = query(tag)
-        if result.count == 0 {
-            return nil
-        }
-        return result[0] == "?" ? nil : result[0]
+        guard let fst = query(tag).first else { return nil }
+        return fst == "?" ? nil : fst
     }
 
     fileprivate func floatType(_ tag:String) -> FloatType? {
-        let str = string(tag)
-        return str != nil ? str?.floatTypeValue : nil
+        return string(tag)?.floatTypeValue
     }
 
     #if false
@@ -204,32 +200,15 @@ extension CIFLoop : CIFItems {
         let valstr = values.joined(separator: ") -> (");
         return ["\n<loop_> -> |",tagstr,"| -> (",valstr,")\n"].joined(separator: "")
     }
+
     func queryTest(_ tag:String) -> Bool {
-        for aTag in tags {
-            if ( tag == aTag ) {
-                return true
-            }
-        }
-        return false
+        return tags.contains(tag)
     }
+
     func queryGet(_ tag: String) -> [String] {
-        var pos : Int = -1
-        for i in 0...(tags.count-1) {
-            if ( self.tags[i] == tag ) {
-                pos = i
-            }
-        }
-        if ( pos == -1 ) {
-            return []
-        }
-        var values : [String] = []
-        for i in 0...(self.values.count-1) {
-            if ( i % tags.count == pos )
-            {
-                values.append(self.values[i])
-            }
-        }
-        return values
+        guard let pos: Int = tags.index(of: tag) else { return [] }
+        
+        return values.enumerated().flatMap { $0 % tags.count == pos ? $1 : nil }
     }
 }
 
@@ -245,14 +224,4 @@ extension CIFItem : CIFItems {
         return [value]
     }
 }
-
-
-
-
-
-
-
-
-
-
 

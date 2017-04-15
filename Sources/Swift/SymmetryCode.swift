@@ -44,8 +44,7 @@ struct SymmetryCode_t {
     }
 
     init( _ str: String? ) {
-
-        var components = str?.components(separatedBy: "_") ?? []
+        let components = str?.components(separatedBy: "_") ?? []
         let type_ = SymmetryCode_t.symmTypeFrom( components )
 
         type = type_
@@ -63,12 +62,7 @@ struct SymmetryCode_t {
         }
 
         if type_ == .n_klm {
-            if components.count > 1 {
-                xyz = SymmetryCode_t.xyzFrom( klm: components[1] )
-            }
-            else {
-                xyz = nil
-            }
+            xyz = components.first.map { SymmetryCode_t.xyzFrom( klm: $0) }
         }
         else {
             xyz = nil

@@ -112,19 +112,18 @@ class DocumentBrowserController: UICollectionViewController, DocumentBrowserQuer
             Our app only supports iCloud Drive so display an error message when
             it is disabled.
         */
-        if FileManager().ubiquityIdentityToken == nil {
-            let alertController = UIAlertController(title: cloudDisabledAlertTitle, message: cloudDisabledAlertMessage, preferredStyle: .alert)
-            
-            let alertAction = UIAlertAction(title: cloudDisabledAlertDismiss, style: .default, handler: nil)
-            
-            alertController.addAction(alertAction)
-            
-            present(alertController, animated: true, completion: nil)
-        }
-        else {
-            copyDeviceFilesIfNeeds()
-            copySampleFilesIfNeeds()
-        }
+//        if FileManager().ubiquityIdentityToken == nil {
+//            let alertController = UIAlertController(title: cloudDisabledAlertTitle, message: cloudDisabledAlertMessage, preferredStyle: .alert)
+//            
+//            let alertAction = UIAlertAction(title: cloudDisabledAlertDismiss, style: .default, handler: nil)
+//            
+//            alertController.addAction(alertAction)
+//            
+//            present(alertController, animated: true, completion: nil)
+//        }
+//        else {
+        openDocumentAtURL(sampleUrl()[0])
+//        }
     }
 
     @IBAction func insertNewObject(_ sender: UIBarButtonItem) {
@@ -493,6 +492,14 @@ extension DocumentBrowserController {
     func copyDeviceFiles() {
         _ = deviceCIFURLs().map{ copyDocument( of: $0, andOpen: false, andRemove: true ) }
     }
+    
+    func sampleUrl() -> [URL] {
+        return ["13MEMS","H2O-Ice","CaCuO2"].map{
+            Bundle.main.url(forResource: $0, withExtension: DocumentBrowserController.documentExtension)!
+        }
+    }
+    
+    
 
     func copySampleFiles() {
         let urls = ["13MEMS","H2O-Ice","CaCuO2"].map{

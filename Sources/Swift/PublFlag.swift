@@ -18,16 +18,11 @@ enum PublFlag_t : String {
 
     var boolValue: Bool {
         switch self {
-        case .yes:
-            return true
-        case .y:
-            return true
-        case .Q:
+        case .yes, .y, .Q:
             return true
         default:
-            break
+            return false
         }
-        return false
     }
 
 }

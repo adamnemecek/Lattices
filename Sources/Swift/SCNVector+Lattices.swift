@@ -25,27 +25,28 @@ extension SCNFloat {
 }
 #endif
 
-extension SCNVector3 {
+extension SCNVector3 : CustomStringConvertible {
     init( _ scalar: SCNFloat ) {
         self.init(scalar,scalar,scalar)
     }
     var xzy: SCNVector3 {
         return SCNVector3(x,z,y)
     }
-    var show: String {
-        return "x :"+x.description+" y:"+y.description+" z:"+z.description
+    public var description: String {
+        return "x: \(x), y: \(y), z: \(z)"
     }
 }
 
-extension SCNVector4 {
+extension SCNVector4 : CustomStringConvertible {
     init(_ xyz: SCNVector3, _ w: SCNFloat ) {
         self.init( vector4( Vector3(xyz), FloatType(w) ) )
     }
     var xyz: SCNVector3 {
         return SCNVector3(x,y,z)
     }
-    var show: String {
-        return "( "+x.description+", "+y.description+", "+z.description+", "+w.description+" )"
+    
+    public var description: String {
+        return "(\(x), \(y), \(z), \(w))"
     }
 }
 
